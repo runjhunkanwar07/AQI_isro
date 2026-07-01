@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Objective 1 Flow Diagram - Surface AQI from Satellite and Ground Data</title>
+  <desc id="desc">Flow diagram showing satellite pollutant data, CPCB surface measurements, and meteorological data feeding a CNN-LSTM model to produce spatial maps of surface AQI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#0c1c33"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9a1f"/>
+      <stop offset="100%" stop-color="#ff7f11"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { fill: #f6fbff; font: 700 48px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; }
+      .subtitle { fill: #b9c7d9; font: 400 22px "Segoe UI", Arial, sans-serif; }
+      .label { fill: #ffffff; font: 500 28px "Segoe UI", Arial, sans-serif; }
+      .small { fill: #ffffff; font: 400 22px "Segoe UI", Arial, sans-serif; }
+      .box { fill: url(#panel); rx: 28; ry: 28; filter: url(#shadow); }
+      .arrow { stroke: #ffb24b; stroke-width: 8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .arrowhead { fill: #ffb24b; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="86" class="title">Objective 1</text>
+  <text x="80" y="128" class="subtitle">Surface AQI estimation using satellite-derived pollutants, CPCB observations, and meteorology</text>
+
+  <rect x="70" y="220" width="390" height="120" class="box"/>
+  <rect x="70" y="370" width="390" height="120" class="box"/>
+  <rect x="70" y="520" width="390" height="120" class="box"/>
+
+  <text x="265" y="268" text-anchor="middle" class="label">Columnar satellite data</text>
+  <text x="265" y="302" text-anchor="middle" class="small">(multi-pollutant concentrations)</text>
+
+  <text x="265" y="418" text-anchor="middle" class="label">CPCB surface data</text>
+  <text x="265" y="452" text-anchor="middle" class="small">(ground-based pollutants)</text>
+
+  <text x="265" y="568" text-anchor="middle" class="label">Meteorological data</text>
+  <text x="265" y="602" text-anchor="middle" class="small">(IMDAA / ERA5 / MERRA-2)</text>
+
+  <rect x="610" y="250" width="380" height="280" class="box"/>
+  <text x="800" y="352" text-anchor="middle" class="label">Deep Learning Model</text>
+  <text x="800" y="392" text-anchor="middle" class="label">(CNN-LSTM)</text>
+  <text x="800" y="446" text-anchor="middle" class="small">Feature fusion and prediction</text>
+
+  <rect x="1110" y="250" width="420" height="170" class="box"/>
+  <rect x="1110" y="450" width="420" height="170" class="box"/>
+
+  <text x="1320" y="320" text-anchor="middle" class="label">Spatial maps of surface AQI</text>
+  <text x="1320" y="362" text-anchor="middle" class="small">India-wide distribution</text>
+
+  <text x="1320" y="520" text-anchor="middle" class="label">Validation and analysis</text>
+  <text x="1320" y="562" text-anchor="middle" class="small">RMSE, MAE, R and time series</text>
+
+  <line x1="460" y1="280" x2="610" y2="320" class="arrow"/>
+  <polygon points="610,320 592,312 596,330" class="arrowhead"/>
+
+  <line x1="460" y1="430" x2="610" y2="390" class="arrow"/>
+  <polygon points="610,390 592,382 596,400" class="arrowhead"/>
+
+  <line x1="460" y1="580" x2="610" y2="460" class="arrow"/>
+  <polygon points="610,460 592,452 596,470" class="arrowhead"/>
+
+  <line x1="990" y1="340" x2="1110" y2="335" class="arrow"/>
+  <polygon points="1110,335 1092,327 1096,345" class="arrowhead"/>
+
+  <line x1="990" y1="440" x2="1110" y2="535" class="arrow"/>
+  <polygon points="1110,535 1091,530 1100,515" class="arrowhead"/>
+
+  <text x="80" y="790" class="subtitle">Input database: pollutant columns + surface measurements + meteorology</text>
+</svg>

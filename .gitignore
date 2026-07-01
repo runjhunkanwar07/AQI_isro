@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+data/demo/*.pkl
+data/demo/*.joblib
+data/raw/
+data/interim/
+data/processed/
+outputs/
+data/real/*.nc
+*.vtt
+sync_output.txt
+train_output.txt
