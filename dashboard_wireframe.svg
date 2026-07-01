@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">ISRO-AQI Dashboard Wireframe Mockup</title>
+  <desc id="desc">High-fidelity UI mock/wireframe of the India Air Quality Mission Control Policy Simulator Page.</desc>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070c14"/>
+      <stop offset="50%" stop-color="#0c1424"/>
+      <stop offset="100%" stop-color="#070c14"/>
+    </linearGradient>
+    
+    <!-- Active Highlight Gradient -->
+    <linearGradient id="activeHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff9d00"/>
+      <stop offset="100%" stop-color="#ff6a00"/>
+    </linearGradient>
+
+    <!-- Glass Panel Gradient -->
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14213d" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0b1326" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Map Clean Gradients -->
+    <linearGradient id="mapLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a080c"/>
+      <stop offset="50%" stop-color="#730d14"/>
+      <stop offset="100%" stop-color="#ff9d00"/>
+    </linearGradient>
+
+    <linearGradient id="mapRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2619"/>
+      <stop offset="50%" stop-color="#1c4d30"/>
+      <stop offset="100%" stop-color="#99e2b4"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      .title { fill: #f3f7fa; font: 700 36px "Segoe UI", Arial, sans-serif; }
+      .section-title { fill: #f3f7fa; font: 600 24px "Segoe UI", Arial, sans-serif; }
+      .header-sub { fill: #8b9bb4; font: 400 16px "Segoe UI", Arial, sans-serif; }
+      .text-main { fill: #d5e0f2; font: 400 18px "Segoe UI", Arial, sans-serif; }
+      .text-muted { fill: #7a8ba3; font: 400 15px "Segoe UI", Arial, sans-serif; }
+      .nav-text { fill: #a5b5cc; font: 500 18px "Segoe UI", Arial, sans-serif; }
+      .nav-text-active { fill: #ffffff; font: 600 18px "Segoe UI", Arial, sans-serif; }
+      .metric-val { fill: #ffffff; font: 700 32px "Segoe UI", Arial, sans-serif; }
+      .metric-lbl { fill: #8b9bb4; font: 500 15px "Segoe UI", Arial, sans-serif; }
+      .badge-txt { fill: #ffffff; font: 700 12px "Segoe UI", Arial, sans-serif; letter-spacing: 0.5px; }
+      .map-lbl { fill: #ffffff; font: 700 20px "Segoe UI", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- ================= SIDEBAR PANEL ================= -->
+  <rect x="30" y="30" width="320" height="1020" rx="20" fill="url(#panel)" filter="url(#shadow)"/>
+  
+  <!-- Logo & Title -->
+  <circle cx="80" cy="80" r="22" fill="url(#activeHighlight)"/>
+  <path d="M72 80 L77 75 L77 85 Z" fill="#ffffff"/>
+  <text x="120" y="88" class="title" style="font-size: 26px; font-weight: 800;">AQI-ISRO</text>
+  <text x="120" y="108" class="text-muted" style="font-size: 13px;">Decision Support System</text>
+  <line x1="60" y1="140" x2="320" y2="140" stroke="#1d2e4a" stroke-width="2"/>
+
+  <!-- Navigation Menu Items -->
+  <!-- Map -->
+  <rect x="50" y="170" width="280" height="50" rx="10" fill="none"/>
+  <text x="75" y="202" class="nav-text">🏠 Air Quality Map</text>
+  
+  <!-- Hotspots -->
+  <rect x="50" y="235" width="280" height="50" rx="10" fill="none"/>
+  <text x="75" y="267" class="nav-text">🔥 HCHO Hotspots</text>
+  
+  <!-- Simulator (Active) -->
+  <rect x="50" y="300" width="280" height="50" rx="10" fill="#ff7a00" fill-opacity="0.15"/>
+  <rect x="50" y="300" width="6" height="50" rx="3" fill="url(#activeHighlight)"/>
+  <text x="75" y="332" class="nav-text-active" style="fill: #ff9d00;">⚖️ Policy Simulator</text>
+
+  <!-- Validation -->
+  <rect x="50" y="365" width="280" height="50" rx="10" fill="none"/>
+  <text x="75" y="397" class="nav-text">🔬 Research &amp; Validation</text>
+
+  <!-- Sidebar Footer Info -->
+  <rect x="50" y="850" width="280" height="170" rx="15" fill="#0d1627" stroke="#1d2e4a" stroke-width="1.5"/>
+  <text x="70" y="885" class="nav-text-active" style="font-size: 16px;">Live System Status</text>
+  <circle cx="270" cy="880" r="7" fill="#00e676"/>
+  <text x="70" y="920" class="text-muted" style="font-size: 14px;">NASA FIRMS: Ingested</text>
+  <text x="70" y="945" class="text-muted" style="font-size: 14px;">Open-Meteo: Connected</text>
+  <text x="70" y="970" class="text-muted" style="font-size: 14px;">CPCB Calibration: Active</text>
+  <text x="70" y="995" class="text-muted" style="font-size: 14px;">Last run: Live Refresh</text>
+
+  <!-- ================= MAIN HEADER ================= -->
+  <text x="390" y="80" class="title">⚖️ Mitigation Policy Simulator Tab</text>
+  <text x="390" y="110" class="header-sub">Run dynamic predictive What-If interventions to evaluate localized air quality drop scenarios across India.</text>
+
+  <!-- Status indicator badge -->
+  <rect x="1720" y="55" width="160" height="40" rx="20" fill="#00e676" fill-opacity="0.12" stroke="#00e676" stroke-width="1.5"/>
+  <circle cx="1745" cy="75" r="6" fill="#00e676"/>
+  <text x="1762" y="80" class="badge-txt" style="fill: #00e676; font-size: 14px;">MODEL ACTIVE</text>
+
+  <!-- ================= CONTROLS & SLIDERS PANEL ================= -->
+  <rect x="390" y="150" width="1490" height="150" rx="20" fill="url(#panel)" filter="url(#shadow)"/>
+  
+  <text x="420" y="195" class="section-title" style="font-size: 20px;">1. Set Simulation Parameters</text>
+
+  <!-- Crop Burning Slider -->
+  <text x="420" y="235" class="text-main" style="font-size: 16px;">🔥 Crop Burning Reduction (Biomass Smoke Factor)</text>
+  <line x1="420" y1="265" x2="850" y2="265" stroke="#1d2e4a" stroke-width="8" stroke-linecap="round"/>
+  <line x1="420" y1="265" x2="680" y2="265" stroke="url(#activeHighlight)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="680" cy="265" r="14" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="680" cy="265" r="7" fill="#ff7a00"/>
+  <text x="870" y="270" class="nav-text-active" style="fill: #ff9d00; font-size: 18px;">- 60%</text>
+
+  <!-- Urban Traffic / Industry Slider -->
+  <text x="1000" y="235" class="text-main" style="font-size: 16px;">🚗 Urban Emissions Control (Traffic &amp; Industrial Factor)</text>
+  <line x1="1000" y1="265" x2="1430" y2="265" stroke="#1d2e4a" stroke-width="8" stroke-linecap="round"/>
+  <line x1="1000" y1="265" x2="1172" y2="265" stroke="url(#activeHighlight)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="1172" cy="265" r="14" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="1172" cy="265" r="7" fill="#ff7a00"/>
+  <text x="1450" y="270" class="nav-text-active" style="fill: #ff9d00; font-size: 18px;">- 40%</text>
+
+  <!-- Run Simulation Button -->
+  <rect x="1600" y="220" width="240" height="60" rx="30" fill="url(#activeHighlight)" filter="url(#shadow)"/>
+  <text x="1720" y="256" text-anchor="middle" class="nav-text-active" style="font-size: 20px; letter-spacing: 0.5px;">RUN SIMULATION</text>
+
+  <!-- ================= COMPARATIVE MAPS ================= -->
+  <!-- Left Map Panel (Current) -->
+  <rect x="390" y="330" width="730" height="520" rx="20" fill="url(#panel)" filter="url(#shadow)"/>
+  <text x="420" y="375" class="map-lbl">🗺️ Current Estimated Surface AQI</text>
+  <rect x="420" y="405" width="670" height="410" rx="15" fill="url(#mapLeft)"/>
+  
+  <!-- Map abstract graphics (Left) -->
+  <path d="M 750,450 Q 800,500 850,480 T 950,600 T 1000,500 T 800,750 Z" fill="#b30000" opacity="0.4"/>
+  <circle cx="850" cy="550" r="120" fill="#e63946" filter="url(#shadow)" opacity="0.6"/>
+  <circle cx="750" cy="500" r="70" fill="#f1faee" opacity="0.2"/>
+  <text x="850" y="560" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold" opacity="0.9">AVG AQI: 324</text>
+  <rect x="440" y="425" width="160" height="35" rx="5" fill="#000000" fill-opacity="0.6"/>
+  <text x="455" y="448" fill="#ff4d4d" font-size="14" font-weight="bold">🔴 SEVERE EXPOSURE</text>
+
+  <!-- Right Map Panel (Simulated) -->
+  <rect x="1150" y="330" width="730" height="520" rx="20" fill="url(#panel)" filter="url(#shadow)"/>
+  <text x="1180" y="375" class="map-lbl" style="fill: #00e676;">🗺️ Post-Intervention Simulated AQI</text>
+  <rect x="1180" y="405" width="670" height="410" rx="15" fill="url(#mapRight)"/>
+
+  <!-- Map abstract graphics (Right) -->
+  <path d="M 1510,450 Q 1560,500 1610,480 T 1710,600 T 1760,500 T 1560,750 Z" fill="#1c4d30" opacity="0.4"/>
+  <circle cx="1610" cy="550" r="120" fill="#52b788" filter="url(#shadow)" opacity="0.6"/>
+  <circle cx="1510" cy="500" r="75" fill="#f1faee" opacity="0.1"/>
+  <text x="1610" y="560" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold" opacity="0.9">AVG AQI: 142</text>
+  <rect x="1200" y="425" width="160" height="35" rx="5" fill="#000000" fill-opacity="0.6"/>
+  <text x="1215" y="448" fill="#00e676" font-size="14" font-weight="bold">🟢 MODERATE / HEALTHY</text>
+
+  <!-- ================= CITY IMPACT REPORT ================= -->
+  <rect x="390" y="870" width="1490" height="180" rx="20" fill="url(#panel)" filter="url(#shadow)"/>
+  <text x="420" y="912" class="section-title" style="font-size: 20px;">🌆 Simulated City Benefits &amp; Impact Analysis</text>
+
+  <!-- Table Headers -->
+  <text x="420" y="950" class="text-muted" style="font-weight: 700;">CITY / ZONE</text>
+  <text x="650" y="950" class="text-muted" style="font-weight: 700; text-anchor: middle;">PRE-POLICY AQI</text>
+  <text x="880" y="950" class="text-muted" style="font-weight: 700; text-anchor: middle;">POST-POLICY AQI</text>
+  <text x="1110" y="950" class="text-muted" style="font-weight: 700; text-anchor: middle;">AQI REDUCTION</text>
+  <text x="1340" y="950" class="text-muted" style="font-weight: 700; text-anchor: middle;">95% CONFIDENCE</text>
+  <text x="1570" y="950" class="text-muted" style="font-weight: 700; text-anchor: middle;">IMPACT RATING</text>
+  <line x1="420" y1="965" x2="1850" y2="965" stroke="#1d2e4a" stroke-width="1.5"/>
+
+  <!-- Row 1: Delhi -->
+  <text x="420" y="995" class="text-main" style="font-weight: 700;">Delhi NCR</text>
+  <text x="650" y="995" class="text-main" style="text-anchor: middle; fill: #ff4d4d;">342.1</text>
+  <text x="880" y="995" class="text-main" style="text-anchor: middle; fill: #ffa200;">184.2</text>
+  <text x="1110" y="995" class="text-main" style="text-anchor: middle; fill: #00e676; font-weight: bold;">- 157.9 (-46%)</text>
+  <text x="1340" y="995" class="text-main" style="text-anchor: middle;">± 15.4 AQI</text>
+  <rect x="1490" y="976" width="160" height="28" rx="14" fill="#00e676" fill-opacity="0.12" stroke="#00e676" stroke-width="1"/>
+  <text x="1570" y="995" text-anchor="middle" class="badge-txt" style="fill: #00e676;">HIGH IMPROVEMENT</text>
+
+  <!-- Row 2: Ludhiana -->
+  <text x="420" y="1035" class="text-main" style="font-weight: 700;">Ludhiana (Source Region)</text>
+  <text x="650" y="1035" class="text-main" style="text-anchor: middle; fill: #ff9d00;">210.5</text>
+  <text x="880" y="1035" class="text-main" style="text-anchor: middle; fill: #00e676;">82.1</text>
+  <text x="1110" y="1035" class="text-main" style="text-anchor: middle; fill: #00e676; font-weight: bold;">- 128.4 (-61%)</text>
+  <text x="1340" y="1035" class="text-main" style="text-anchor: middle;">± 18.1 AQI</text>
+  <rect x="1490" y="1016" width="160" height="28" rx="14" fill="#00e676" fill-opacity="0.12" stroke="#00e676" stroke-width="1"/>
+  <text x="1570" y="1035" text-anchor="middle" class="badge-txt" style="fill: #00e676;">SOURCE ELIMINATED</text>
+</svg>

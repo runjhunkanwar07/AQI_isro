@@ -415,6 +415,8 @@ elif view_mode == "📊 Detailed Analysis":
     st.title("📊 Detailed Air Quality Analysis")
     st.markdown("---")
     
+    display_df = pred_df.nlargest(10, 'aqi_pred').copy()
+    display_df['Region / City'] = display_df.apply(lambda row: get_nearest_city(row['lat'], row['lon']), axis=1)
     display_df['AQI'] = display_df['aqi_pred'].round(1)
     display_df['Latitude'] = display_df['lat'].round(4)
     display_df['Longitude'] = display_df['lon'].round(4)
